@@ -41,5 +41,12 @@
    * ![avatar](https://pic1.zhimg.com/v2-44be35da53ae9ee564ce444542a43d10_b.webp)
 
   * Insertion sort 插入排序法
-   * 
+   * Suppose there exists a function called Insert designed to insert a value into a sorted sequence at the beginning of an array. It operates by beginning at the end of the sequence and shifting each element one place to the right until a suitable position is found for the new element. The function has the side effect of overwriting the value stored immediately after the sorted sequence in the array.
    * 先將待排序列的第一個元素當作有序序列，把第二個元素到最後一個元素當成是未排序序列。從頭到尾依次掃描未排序序列，將掃描到的每個元素插入有序序列的適當位置。 （如果待插入的元素與有序序列中的某個元素相等，則將待插入元素插入到相等元素的後面。）
+   * ![avatar](https://pic1.zhimg.com/v2-be81c151f38d8923fe1ede31ac530ac4_b.webp)
+
+  * Shell sort 希爾排序法
+   * The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. 
+   * 基本思路是先將整個數據序列分割成若干子序列分別進行直接插入排序，待整個序列中的記錄基本有序時，再對全部數據進行依次直接插入排序。選擇一個增量序列 t1，t2，……，tk，其中 ti > tj, tk = 1；按增量序列個數 k，對序列進行 k 趟排序；每趟排序，根據對應的增量 ti，將待排序列分割成若干長度為 m 的子序列，分別對各子表進行直接插入排序。僅增量因子為 1 時，整個序列作為一個表來處理，表長度即為整個序列的長度。
+   * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiadtZekLQySMDdNsZTx6jyaO6spIkjPFjwqfdhd2XfRUnic1PjV1yRxrw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+   * 
