@@ -25,10 +25,10 @@
 |   桶排序 Bucket sort    |  $O(n+k)$  |   $O(n^2)$   |  $O(n+k)$  | Out-place |
 |   基數排序 radix sort   |  $O(n+k)$  |   $O(nxk)$   |  $O(n+k)$  | Out-place |
  
- * n: 代表數據規模及數據量大小
-   k: 桶的個數
-   In-place: 不佔用額外內存，只佔用常數內存
-   Out-place: 佔用額外內存
+   * n: 代表數據規模及數據量大小
+   * k: 桶的個數
+   * In-place: 不佔用額外內存，只佔用常數內存
+   * Out-place: 佔用額外內存
 
   * Bubble sort 冒泡排序法
    * Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble"     to the top of the list. 
@@ -47,6 +47,33 @@
 
   * Shell sort 希爾排序法
    * The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. 
-   * 基本思路是先將整個數據序列分割成若干子序列分別進行直接插入排序，待整個序列中的記錄基本有序時，再對全部數據進行依次直接插入排序。選擇一個增量序列 t1，t2，……，tk，其中 ti > tj, tk = 1；按增量序列個數 k，對序列進行 k 趟排序；每趟排序，根據對應的增量 ti，將待排序列分割成若干長度為 m 的子序列，分別對各子表進行直接插入排序。僅增量因子為 1 時，整個序列作為一個表來處理，表長度即為整個序列的長度。
+   * 基本思路是先將整個數據序列分割成若干子序列分別進行直接插入排序，待整個序列中的記錄基本有序時，再對全部數據進行依次直接插入排序。
+   * 選擇一個增量序列 t1，t2，……，tk，其中 ti > tj, tk = 1；
+   * 按增量序列個數 k，對序列進行 k 趟排序；
+   * 每趟排序，根據對應的增量 ti，將待排序列分割成若干長度為 m 的子序列，分別對各子表進行直接插入排序。僅增量因子為 1 時，整個序列作為一個表來處理，表長度即為整個序列的長度。
    * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiadtZekLQySMDdNsZTx6jyaO6spIkjPFjwqfdhd2XfRUnic1PjV1yRxrw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+   
+  * Merge sort 歸併排序法
+   * Divide the unsorted list into n sublists, each containing one element (a list of one element is considered sorted). Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.
+   * 申請空間，使其大小為兩個已經排序序列之和，該空間用來存放合併後的序列；
+   * 設定兩個指針，最初位置分別為兩個已經排序序列的起始位置；
+   * 比較兩個指針所指向的元素，選擇相對小的元素放入到合併空間，並移動指針到下一位置；
+   * 重複步驟 3 直到某一指針達到序列尾；將另一序列剩下的所有元素直接複製到合併序列尾。
+   * ![avatar](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+
+   * Quick sort 快速排序法
+    * Pick an element, called a pivot, from the array. 
+    * Partitioning: reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation. 
+    * Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.
+    * 首先從數列中挑出一個元素，並將這個元素稱為「基準」，英文pivot。重新排序數列，所有比基準值小的元素擺放在基準前面，所有比基準值大的元素擺在基准後面（相同的數可以到任何一邊）。在這個分區結束之後，該基準就處於數列的中間位置。這個稱為分區（partition）操作。之後，在子序列中繼續重複這個方法，直到最後整個數據序列排序完成
+    * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiaAY3VU8iaziaYcxAasTdrIu69BOVPYtfvqdvicmlJDS94cG2tjwZhVkdHA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+  
+   * Heap sort 堆排序法
+    * it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. 
+    * 創建一個堆 H[0……n-1]；
+    * 把堆首（最大值）和堆尾互換；
+    * 把堆的尺寸縮小 1，並調用 shift_down(0)，目的是把新的數組頂端數據調整到相應位置；
+    * 重複步驟 2，直到堆的尺寸為 1。
+    * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRian1jgiaGZE9k1xZTp9B1icHia0jIXiba3ibgnIBibdfSN4I5US4WtrQJQMiakw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1) 
+
    * 
