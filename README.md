@@ -76,4 +76,12 @@
     * 重複步驟 2，直到堆的尺寸為 1。
     * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRian1jgiaGZE9k1xZTp9B1icHia0jIXiba3ibgnIBibdfSN4I5US4WtrQJQMiakw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1) 
 
-   * 
+   * Counting sort 計數排序法
+    * 花O(n)的時間掃描一下整個序列 A，獲取最小值 min 和最大值 max
+    * 開闢一塊新的空間創建新的數組 B，長度為 ( max - min + 1)
+    * 數組 B 中 index 的元素記錄的值是 A 中某元素出現的次數
+    * 最後輸出目標整數序列，具體的邏輯是遍歷數組 B，輸出相應元素以及對應的個數
+    * ![avatar] (https://pic1.zhimg.com/v2-827d96b8ca3682e8775f4916f22b45ac_b.webp)
+
+   * Bucket sort 桶排序法
+    *  
