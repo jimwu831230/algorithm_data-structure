@@ -84,4 +84,14 @@
     * ![avatar] (https://pic1.zhimg.com/v2-827d96b8ca3682e8775f4916f22b45ac_b.webp)
 
    * Bucket sort 桶排序法
-    *  
+    * 將數組劃分到一定數量的有序的桶裡，然後再對每個桶中的數據進行排序，最後再將各個桶裡的數據有序的合併到一起。
+    * ![avatar] (https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRia0umOurgFRv8ESYzcK6bXknufLgJGLaiaTrDTXUk09R6ia2DhbCPAJx0A/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+
+   * Radix sort 基數排序法
+    * 將所有待比較數值（正整數）統一為同樣的數位長度，數位較短的數前面補零
+    * 從最低位開始，依次進行一次排序
+    * 從最低位排序一直到最高位排序完成以後, 數列就變成一個有序序列
+    * ![avatar](https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRial8LfeK5f941BmtmZcVlP0my2qgBXq6wEZ0PTDrcPqN3ntt7ibPrUxrg/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+
+
+     
