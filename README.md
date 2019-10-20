@@ -12,6 +12,9 @@
 
 ## Sorting Algorithm 排序算法
 * 
+* [五分钟学算法](https://mp.weixin.qq.com/s?__biz=MzUyNjQxNjYyMg==&mid=2247484184&idx=1&sn=62965b401aa42107b3c17d1d8ea17454&chksm=fa0e6c99cd79e58f298e9026f677f912bd8c8e55edb48fc509b2b5834f05e529a9b47d59d202&scene=21#wechat_redirect)
+* [知乎十大经典排序算法](https://zhuanlan.zhihu.com/p/41923298)
+
 |        排序算法         | 平均複雜度 |   最壞情況   | 空間複雜度 | 排序方式  |
 | :---------------------: | :--------: | :----------: | :--------: | :-------: |
 |  冒泡排序 Bubble sort   |  $O(n^2)$  |   $O(n^2)$   |   $O(1)$   | In-place  |
